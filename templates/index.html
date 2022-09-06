@@ -58,19 +58,14 @@
                     <div class="card-header p-0">
                         <div class="d-flex">
                             <div class="p-2 flex-grow-1"><i class="bi bi-file-medical-fill"></i>&nbsp; Noticeboard</div>
-                            <div class="p-2"><a href="/"><i class="bi bi-box-arrow-up-right"></i></a></div>
+                            <div class="p-2"><a href="/noticeboard"><i class="bi bi-box-arrow-up-right"></i></a></div>
                         </div>
                     </div>
                     <div class="card-body">
                         <ul>
-                            <li><a href="">Lorem ipsum dolor sit amet.</a></li>
-                            <li><a href="">Lorem ipsum dolor sit amet.</a></li>
-                            <li><a href="">Lorem ipsum dolor sit amet.</a></li>
-                            <li><a href="">Lorem ipsum dolor sit amet.</a></li>
-                            <li><a href="">Lorem ipsum dolor sit amet.</a></li>
-                            <li><a href="">Lorem ipsum dolor sit amet.</a></li>
-                            <li><a href="">Lorem ipsum dolor sit amet.</a></li>
-                            <li><a href="">Lorem ipsum dolor sit amet.</a></li>
+                            {% for n in notice %}
+                            <li><a href="{{n.noticeFile.url}}">{{n.noticeTitle}}</a></li>
+                            {% endfor%}
                         </ul>
                     </div>
                 </div>
@@ -86,15 +81,9 @@
                     </div>
                     <div class="card-body">
                         <ul>
-                            <li><a href="">Lorem ipsum dolor sit amet.</a></li>
-                            <li><a href="">Lorem ipsum dolor sit amet.</a></li>
-                            <li><a href="">Lorem ipsum dolor sit amet.</a></li>
-                            <li><a href="">Lorem ipsum dolor sit amet.</a></li>
-                            <li><a href="">Lorem ipsum dolor sit amet.</a></li>
-                            <li><a href="">Lorem ipsum dolor sit amet.</a></li>
-                            <li><a href="">Lorem ipsum dolor sit amet.</a></li>
-                            <li><a href="">Lorem ipsum dolor sit amet.</a></li>
-                        </ul>
+                            {% for l in lecture %}
+                            <li><a href="{{n.noticeFile.url}}">{{l.lectureTitle}}</a></li>
+                            {% endfor%}
                     </div>
                 </div>
             </div>

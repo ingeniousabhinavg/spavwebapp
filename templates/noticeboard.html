@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}School of Planning and Architecture, Vijayawada{% endblock title %}
+{% block noticeboard %}
+{% load static %}
+<br>
+<section>
+    <div class="container">
+        <div class="row">
+           <div class="card shadow-sm p-0">
+            <div class="card-header text-center"><strong>Noticeboard</strong></div>
+            <div class="card-body">
+                <ul>
+                    {% for n in notice %}
+                    <li><a href="{{n.noticeFile.url}}" target="_blank">{{n.noticeTitle}}</a></li>
+                    {% endfor%}
+                </ul>
+            </div>
+            <div class="card-footer">
+                Pagination
+            </div>
+           </div>
+        </div>
+    </div>
+</section>
+{% endblock noticeboard %}

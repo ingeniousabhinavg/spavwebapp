@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
     {% load static %}
-
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,7 +26,7 @@
                 <div class="row p-1">
                     <div class="col-5">
                         <div class="card">
-                            <a href="/"><img src="{% static 'img/spav_logo.jpg' %}" alt="" class="card-img"></a>
+                            <a href="/"><img src="{% static 'img/spav_logo.jpg' %}" alt="" class="card-img p-1"></a>
                         </div>
                     </div>
                     <div class="col-6"></div>
@@ -49,9 +48,7 @@
                                         <li class="nav-item">
                                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                                         </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#">Link</a>
-                                        </li>
+                                       
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle" href="#" role="button"
                                                 data-bs-toggle="dropdown" aria-expanded="false">
@@ -82,8 +79,16 @@
                 </div>
             </div>
         </header>
+
+        <!-- home page  -->
         {% block index %}
         {% endblock index %}
+        <!-- home page  -->
+        
+        <!-- noticeboard  -->
+        {% block noticeboard %}
+        {% endblock noticeboard %}
+        <!-- noticeboard  -->
 
 
         <br>
