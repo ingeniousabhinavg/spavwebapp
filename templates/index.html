@@ -2,6 +2,11 @@
 {% block title %}School of Planning and Architecture, Vijayawada{% endblock title %}
 {% block index %}
 {% load static %}
+<style>
+    .card {
+        border: solid dotted black 1;
+    }
+</style>
 <section>
     <div class="container-fluid">
         <div class="row">
@@ -53,7 +58,7 @@
         {% endfor%}
 
         <div class="row g-1">
-            <div class="col-4">
+            <div class="col-sm-4">
                 <div class="card">
                     <div class="card-header p-0">
                         <div class="d-flex">
@@ -61,7 +66,7 @@
                             <div class="p-2"><a href="/noticeboard"><i class="bi bi-box-arrow-up-right"></i></a></div>
                         </div>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body  overflow-auto p-1" style="height: 300px;">
                         <ul>
                             {% for n in notice %}
                             <li><a href="{{n.noticeFile.url}}">{{n.noticeTitle}}</a></li>
@@ -70,8 +75,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-4">
-                <div class="card">
+            <div class="col-sm-4 ">
+                <div class="card ">
                     <div class="card-header p-0">
                         <div class="d-flex">
                             <div class="p-2 flex-grow-1"><i class="bi bi-collection-play-fill"></i> &nbsp; Upcoming
@@ -79,15 +84,16 @@
                             <div class="p-2"><a href="/"><i class="bi bi-box-arrow-up-right"></i></a></div>
                         </div>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body overflow-auto p-1" style="height: 300px;">
                         <ul>
                             {% for l in lecture %}
                             <li><a href="{{n.noticeFile.url}}">{{l.lectureTitle}}</a></li>
                             {% endfor%}
+                        </ul>
                     </div>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-sm-4">
                 <div class="card">
                     <div class="card-header p-0">
                         <div class="d-flex">
@@ -96,7 +102,7 @@
                             <div class="p-2"><a href="/na"><i class="bi bi-box-arrow-up-right"></i></a></div>
                         </div>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body overflow-auto p-1" style="height: 300px;">
                         <div class="accordion accordion-flush" id="accordionFlushExample">
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="flush-headingOne">
@@ -164,6 +170,69 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<br>
+<section>
+    <div class="container-fluid p-1">
+        <div class="row g-1">
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-header">About</div>
+                    <div class="card-body p-1">
+                        <p>"School of Planning and Architecture, Vijayawada, (in short SPAV), was established on July 7,
+                            2008 by the Ministry of Human Resource Development (MoE), Government of India, as an
+                            autonomous institution. SPAV is a premier Centrally Funded Technical Institution (CFTI)
+                            directly under the MoE, for excellence in the fields of Planning and Architecture. Although
+                            in its nascent stage, with experienced faculty and guest lectures by eminent visiting
+                            faculty and industry experts from all over the country, the quality of education imparted
+                            and its focus on research puts SPAV in the league of leading institutes in the country."</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Video & Gallery</div>
+                    <div class="card-body p-1">
+                        <iframe class="card-img" width="560" height="315"
+                            src="https://www.youtube.com/embed/AJ7vE64HLac" title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body p-1">
+                        <marquee behavior="scroll" direction="left">
+                            <iframe class="card-img" width="560" height="90"
+                                src="https://www.youtube.com/embed/AJ7vE64HLac" title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <iframe class="card-img" width="560" height="90"
+                                src="https://www.youtube.com/embed/AJ7vE64HLac" title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </marquee>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-header">Vision</div>
+                    <div class="card-body p-1">
+                        <p>“ To achieve academic excellence in Architecture and Planning through innovating, creating,
+                            acquiring and disseminating knowledge using sustainable local and global practices and
+                            enhancing the quality of society through responsible built environment. ”</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body p-1">
+                        <img src="{% static 'img/vision.jpg' %}" alt="" height="208px" class="card-img">
                     </div>
                 </div>
             </div>
