@@ -66,7 +66,7 @@
                             <div class="p-2"><a href="/noticeboard"><i class="bi bi-box-arrow-up-right"></i></a></div>
                         </div>
                     </div>
-                    <div class="card-body  overflow-auto p-1" style="height: 300px;">
+                    <div class="card-body  overflow-auto p-1" style="height: 230px;">
                         <ul>
                             {% for n in notice %}
                             <li><a href="{{n.noticeFile.url}}">{{n.noticeTitle}}</a></li>
@@ -84,7 +84,7 @@
                             <div class="p-2"><a href="/"><i class="bi bi-box-arrow-up-right"></i></a></div>
                         </div>
                     </div>
-                    <div class="card-body overflow-auto p-1" style="height: 300px;">
+                    <div class="card-body overflow-auto p-1" style="height: 230px;">
                         <ul>
                             {% for l in lecture %}
                             <li><a href="{{n.noticeFile.url}}">{{l.lectureTitle}}</a></li>
@@ -102,7 +102,7 @@
                             <div class="p-2"><a href="/na"><i class="bi bi-box-arrow-up-right"></i></a></div>
                         </div>
                     </div>
-                    <div class="card-body overflow-auto p-1" style="height: 300px;">
+                    <div class="card-body overflow-auto p-1" style="height: 230px;">
                         <div class="accordion accordion-flush" id="accordionFlushExample">
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="flush-headingOne">
@@ -177,6 +177,7 @@
     </div>
 </section>
 <br>
+<h1 class="text-center bg-primary text-light p-4">SPAV</h1>
 <section>
     <div class="container-fluid p-1">
         <div class="row g-1">
@@ -239,4 +240,18 @@
         </div>
     </div>
 </section>
+<br>
+<section>
+<h1 class="text-center bg-primary text-light p-4">Glimpse of Student's Work</h1>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-1">
+            <div class="card">
+                <img src="{% static 'img/sl1.jpg' %}" alt="" class="card-img">
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
 {% endblock index %}
