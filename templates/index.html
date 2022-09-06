@@ -39,12 +39,18 @@
                 </div>
             </div>
         </div>
+        {% for a in alert %}
+        {% if alert %}
         <div class="row p-1">
-            <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+            <div class="alert alert-{{a.alertIntensity}} alert-dismissible fade show" role="alert">
+                <marquee behavior="scroll" direction="left">
+                    <a href="{{a.alertFile.url}}" target="_blank">{{a.alertTitle}}</a>
+                </marquee>
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-              </div>
+            </div>
         </div>
+        {% endif %}
+        {% endfor%}
 
         <div class="row g-1">
             <div class="col-4">
