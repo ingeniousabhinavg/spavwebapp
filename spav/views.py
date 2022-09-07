@@ -1,10 +1,12 @@
 from multiprocessing import context
 from django.shortcuts import render
-from .models import Alert, Noticeboard, UpcomingLect, FeaturedLogo, GlimpseSW
+from .models import Alert, Noticeboard, UpcomingLect, FeaturedLogo, GlimpseSW, SystemAdmin, TechanicalOfficer
 from django.core.paginator import Paginator
 
 # Create your views here.
 
+toData = TechanicalOfficer.objects.all()
+systemadminData = SystemAdmin.objects.all()
 lectureData = UpcomingLect.objects.all()
 noticeData = Noticeboard.objects.all()
 alertData = Alert.objects.all()
@@ -21,7 +23,9 @@ context = {
     'notice':noticeData,
     'lecture': lectureData,
     'logo': featuredLogo,
-    'studentswork':studentswork
+    'studentswork':studentswork,
+    'systemadminData':systemadminData,
+    'toData':toData,
 
 }
 
@@ -43,4 +47,4 @@ def registration(request):
     return render(request, 'registration.html' )
 
 def cc(request):
-    return render(request, 'cc.html' )
+    return render(request, 'cc.html', context )

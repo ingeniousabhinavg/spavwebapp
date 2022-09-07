@@ -1,4 +1,7 @@
 from email.mime import image
+import profile
+from pyexpat import model
+from unicodedata import name
 from django.db import models
 
 # Create your models here.
@@ -56,3 +59,51 @@ class GlimpseSW(models.Model):
     def __str__(self) -> str:
         return self.altText
 # students work #
+
+## models for permanent positions ##
+class SystemAdmin(models.Model):
+    name = models.CharField(max_length=50) 
+    qualifications = models.CharField(max_length=200)
+    email = models.EmailField(max_length=254)
+    phone = models.CharField(max_length=14)
+    profile_Pic = models.ImageField(upload_to='profiles', max_length=254)
+    date =  models.DateField(auto_now=True, auto_now_add=False)
+
+
+    def __str__(self) -> str:
+        return self.name
+
+class TechanicalOfficer(models.Model):
+    name = models.CharField(max_length=50) 
+    qualifications = models.CharField(max_length=200)
+    email = models.EmailField(max_length=254)
+    phone = models.CharField(max_length=14)
+    profile_Pic = models.ImageField(upload_to='profiles', max_length=254)
+    date =  models.DateField(auto_now=True, auto_now_add=False)
+
+
+    def __str__(self) -> str:
+        return self.name
+## models for permanent positions ## 
+
+# faculty database #
+class Faculty(models.Model):
+    name = models.CharField(max_length=50) 
+    DESIG_CHOICES = (
+        ('Professor','Professor'),
+        ('Associate Professor','Associate Professor'),
+        ('Assistant Professor','Assistant Professor'),
+    )
+    designation = models.CharField(max_length=50, choices=DESIG_CHOICES) 
+    qualifications = models.CharField(max_length=200)
+    email = models.EmailField(max_length=254)
+    phone = models.CharField(max_length=14)
+    profile_Pic = models.ImageField(upload_to='profiles', max_length=254)
+    date =  models.DateField(auto_now=True, auto_now_add=False)
+    cv = models.FileField(upload_to='cv', max_length=100)
+    Publications = models.URLField(max_length=200)
+
+    def __str__(self) -> str:
+        return self.name
+
+# faculty database #

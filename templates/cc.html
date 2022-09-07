@@ -3,47 +3,162 @@
 {% block cc %}
 <section>
     <h1 class="text-center bg-primary text-light p-4">Computer Center</h1>
-    <div class="container-fluid">
+    <p class="text-light bg-danger p-2 text-center">Need to be Filled with Content</p>
+    <div class="container">
         <div class="row">
             <div class="col-sm-3">
                 <div class="card">
-                    <div class="accordion accordion-flush" id="accordionFlushExample">
-                        <div class="accordion-item">
-                          <h2 class="accordion-header" id="flush-headingOne">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                              Accordion Item #1
-                            </button>
-                          </h2>
-                          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
-                          </div>
-                        </div>
-                        <div class="accordion-item">
-                          <h2 class="accordion-header" id="flush-headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                              Accordion Item #2
-                            </button>
-                          </h2>
-                          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
-                          </div>
-                        </div>
-                        <div class="accordion-item">
-                          <h2 class="accordion-header" id="flush-headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                              Accordion Item #3
-                            </button>
-                          </h2>
-                          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-                          </div>
-                        </div>
-                      </div>
+                    <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist"
+                        aria-orientation="vertical">
+                        <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
+                            data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
+                            aria-selected="true">Overview</button>
+                        <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
+                            data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
+                            aria-selected="false">Network Topology</button>
+                        <button class="nav-link" id="v-pills-disabled-tab" data-bs-toggle="pill"
+                            data-bs-target="#v-pills-disabled" type="button" role="tab" aria-controls="v-pills-disabled"
+                            aria-selected="false">Hardware Configuration</button>
+                        <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
+                            data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages"
+                            aria-selected="false">Availabel Sofwares</button>
+                        <button class="nav-link" id="v-pills-team-tab" data-bs-toggle="pill"
+                            data-bs-target="#v-pills-team" type="button" role="tab" aria-controls="v-pills-team"
+                            aria-selected="false">Team</button>
+                        <button class="nav-link" id="v-pills-downloads-tab" data-bs-toggle="pill"
+                            data-bs-target="#v-pills-downloads" type="button" role="tab"
+                            aria-controls="v-pills-downloads" aria-selected="false">Downloads</button>
+                    </div>
                 </div>
             </div>
             <div class="col-sm-9">
                 <div class="card">
-                    
+                    <div class="tab-content" id="v-pills-tabContent">
+                        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                            aria-labelledby="v-pills-home-tab" tabindex="0">
+                            <h3 class="text-center">Computer Networking and Security</h3>
+                            <hr>
+                            <p class="p-2">An Institute LAN Caters to approximately 900 users at a time and it has been
+                                designed with a Full-duplex Gigabit Ethernet backbone offering an aggregate bandwidth of
+                                10 Gbps between different Layer2 &Layer3 Switches using Multimode fiber. All the
+                                switches are Uplinked through OFC(Optical Fiber Cabling).</p>
+                            <h6>The most important features of campus wide Backbone Network is as mentioned below:</h6>
+                            <p class="p-2">
+
+                            <ul>
+                                <li>• 10 Gbps Fiber Optic Backbone</li>
+                                <li>Gigabit Routing Switches</li>
+                            </ul>
+                            <h6>Need to be formatted </h6>
+                            • Three tier architecture - consist of Core, distribution and Rack switches
+                            • 1&10 Gbps Manageable Switches at user end Racks capable of layer3 Switching
+                            • UTP CAT 6 Structured Cabling
+                            • There are about 60 switches, which includes mainly Extreme switches, located in 4
+                            different buildings including hostels& Visiting faculty Block.
+                            • 1 Gbps connectivity to each client PC
+                            • IP Telephone supports are provided through mini exchange like IPPBX System
+                            • Layer 3 intelligence high performance and throughput capacity
+                            • Non-blocking forwarding
+                            • Support for QoS, bandwidth tracking, and traffic prioritization
+                            • Manageable edge switches are connected in RACK side.
+                            • SPAV is connected to the Internet via 1Gbps shared connectivity by National Informatics
+                            Centre (NIC) using Bharat Sanchar Nigam Ltd (BSNL) as a part of National Knowledge Network
+                            (NKN) and National Mission on Education through Information & Communication Technology
+                            (NME-ICT) .
+                            • Network security is provided through Sophos appliance.
+                            • Datacenter is maintaining centralized Bio-metric Attendance System for user entry and
+                            exist.
+                            • Power Backup is provided through 80KVA UPS.
+                            • For the safety and security, all the hostel premises are installed in IP surveillance
+                            systems, further expansion of IP surveillance systems is still continues for Academic and
+                            Visiting Faculty Blocks.
+                            • At present all the three Student Hotels and Academic Blocks are connected using 102
+                            Wireless Access Points (WAP) to enable students to access Internet and Intranet from their
+                            laptops in academic Block &Hostels. Network expansion is still continues for making the
+                            institute as a full fledged Wi-Fi enabled campus.
+                            </p>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                            aria-labelledby="v-pills-profile-tab" tabindex="0">
+                            <h3 class="text-center">Network Topology</h3>
+                            <hr>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel"
+                            aria-labelledby="v-pills-disabled-tab" tabindex="0">
+                            <h3 class="text-center">Hardware Configuration</h3>
+                            <hr>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
+                            aria-labelledby="v-pills-messages-tab" tabindex="0">
+                            <h3 class="text-center">Availabel Sofwares</h3>
+                            <hr>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
+                            aria-labelledby="v-pills-settings-tab" tabindex="0">
+                            <h3 class="text-center">Availabel Sofwares</h3>
+                            <hr>
+
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-team" role="tabpanel" aria-labelledby="v-pills-team-tab"
+                            tabindex="0">
+                            <h3 class="text-center">Team - Computer Center</h3>
+                            <hr>
+
+                            
+                                <div class="row g-2">
+                                    {% for s in systemadminData %}
+                                    <div class="col-sm-4">
+                                        <div class="card">
+                                            <div class="card-header p-1"> <img src="{{s.profile_Pic.url}}" class="img-fluid rounded-start p-0" alt="..."></div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">System Administrator</h5>
+                                            <h6 class="card-title">{{s.name}}</h6>
+                                            <p class="card-text">{{s.qualifications}}</p>
+                                            <p class="card-text">{{s.email}}</p>
+                                            <p class="card-text">{{s.phone}}</p>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+
+                                    {% for s in toData %}
+                                    <div class="col-sm-4">
+                                        <div class="card">
+                                            <div class="card-header p-1"> <img src="{{s.profile_Pic.url}}" class="img-fluid rounded-start p-0" alt="..."></div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Tecanical Officer</h5>
+                                            <h6 class="card-title">{{s.name}}</h6>
+                                            <p class="card-text">{{s.qualifications}}</p>
+                                            <p class="card-text">{{s.email}}</p>
+                                            <p class="card-text">{{s.phone}}</p>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+
+                                    {% for s in toData %}
+                                    <div class="col-sm-4">
+                                        <div class="card">
+                                            <div class="card-header p-1"> <img src="{{s.profile_Pic.url}}" class="img-fluid rounded-start p-0" alt="..."></div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Tecanical Officer</h5>
+                                            <h6 class="card-title">{{s.name}}</h6>
+                                            <p class="card-text">{{s.qualifications}}</p>
+                                            <p class="card-text">{{s.email}}</p>
+                                            <p class="card-text">{{s.phone}}</p>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                    
+                                </div>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-downloads" role="tabpanel"
+                            aria-labelledby="v-pills-downloads-tab" tabindex="0">
+                            <h3 class="text-center">Downloads</h3>
+                            <hr>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
