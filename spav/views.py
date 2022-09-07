@@ -1,6 +1,6 @@
 from multiprocessing import context
 from django.shortcuts import render
-from .models import Alert, Noticeboard, UpcomingLect
+from .models import Alert, Noticeboard, UpcomingLect, FeaturedLogo, GlimpseSW
 from django.core.paginator import Paginator
 
 # Create your views here.
@@ -8,6 +8,8 @@ from django.core.paginator import Paginator
 lectureData = UpcomingLect.objects.all()
 noticeData = Noticeboard.objects.all()
 alertData = Alert.objects.all()
+featuredLogo = FeaturedLogo.objects.all()
+studentswork = GlimpseSW.objects.all()
 
 # noticeboard pagination #
 
@@ -18,6 +20,9 @@ context = {
     'alert': alertData,
     'notice':noticeData,
     'lecture': lectureData,
+    'logo': featuredLogo,
+    'studentswork':studentswork
+
 }
 
 def index(request):
@@ -33,3 +38,9 @@ def noticeboard(request):
         'page':page_obj
     }
     return render(request, 'noticeboard.html',contextt)
+
+def registration(request):
+    return render(request, 'registration.html' )
+
+def cc(request):
+    return render(request, 'cc.html' )

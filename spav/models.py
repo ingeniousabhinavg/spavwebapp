@@ -1,3 +1,4 @@
+from email.mime import image
 from django.db import models
 
 # Create your models here.
@@ -34,3 +35,24 @@ class UpcomingLect(models.Model):
 
     def __str__(self) -> str:
         return self.lectureTitle
+
+# model for featured logo #
+class FeaturedLogo(models.Model):
+    altText = models.CharField(max_length=50, null=True)
+    logoLink = models.URLField(max_length=200, null=False)
+    logoImage = models.FileField(upload_to='flogo', max_length=100, null=False)
+    date = models.DateTimeField(auto_now=False, auto_now_add=False, null=False)
+
+    def __str__(self) -> str:
+        return self.altText
+# model for featured logo #
+
+# students work #
+class GlimpseSW(models.Model):
+    altText = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='studentsglimplse')
+    date =  models.DateField(auto_now=False, auto_now_add=False)
+
+    def __str__(self) -> str:
+        return self.altText
+# students work #

@@ -2,11 +2,6 @@
 {% block title %}School of Planning and Architecture, Vijayawada{% endblock title %}
 {% block index %}
 {% load static %}
-<style>
-    .card {
-        border: solid dotted black 1;
-    }
-</style>
 <section>
     <div class="container-fluid">
         <div class="row">
@@ -115,8 +110,9 @@
                                 <div id="flush-collapseOne" class="accordion-collapse collapse"
                                     aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                                     <div class="accordion-body">
-                                        Department Of Planning<br>
-                                        Academic Prospectus <br> Newsletter - July 2021 <br> Archive Activities
+                                        <a href="/"><i class="bi bi-caret-right"></i>Academic Prospectus</a> <br> <a
+                                            href=""><i class="bi bi-caret-right"></i>Newsletter - July 2021</a> <br> <a
+                                            href=""><i class="bi bi-caret-right"></i>Activities</a>
                                     </div>
                                 </div>
                             </div>
@@ -131,8 +127,9 @@
                                 <div id="flush-collapseTwo" class="accordion-collapse collapse"
                                     aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                                     <div class="accordion-body">
-                                        Department Of Architecture <br>
-                                        Academic Prospectus <br> Newsletter - July 2021 <br> Archive Activities
+                                        <a href="/"><i class="bi bi-caret-right"></i>Academic Prospectus</a> <br> <a
+                                            href=""><i class="bi bi-caret-right"></i>Newsletter - July 2021</a> <br> <a
+                                            href=""><i class="bi bi-caret-right"></i>Activities</a>
                                     </div>
                                 </div>
                             </div>
@@ -146,12 +143,11 @@
                                 </h2>
                                 <div id="flush-collapseThree" class="accordion-collapse collapse"
                                     aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                    <div class="accordion-body">Placeholder content for this accordion, which is
-                                        intended to demonstrate the <code>.accordion-flush</code> class. This is the
-                                        third item's accordion body. Nothing more exciting happening here in terms of
-                                        content, but just filling up the space to make it look, at least at first
-                                        glance, a bit more representative of how this would look in a real-world
-                                        application.</div>
+                                    <div class="accordion-body">
+                                        <a href="/"><i class="bi bi-caret-right"></i>Results</a> <br> <a href=""><i
+                                                class="bi bi-caret-right"></i>Academic Calender</a> <br> <a href=""><i
+                                                class="bi bi-caret-right"></i>Time Table</a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="accordion-item">
@@ -164,9 +160,10 @@
                                 </h2>
                                 <div id="flush-collapseachive" class="accordion-collapse collapse"
                                     aria-labelledby="flush-headingachive" data-bs-parent="#accordionFlushExample">
-                                    <div class="accordion-body">Placeholder content for this accordion, which is
-                                        intended to demonstrate the <code>.accordion-flush</code> class. This is the
-                                        first item's accordion body.</div>
+                                    <div class="accordion-body">
+                                        <i class="bi bi-caret-right"></i><a href="/">Students Achivements</a> <br>
+                                        <i class="bi bi-caret-right"></i><a href="/">Faculty Achivements</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -199,7 +196,7 @@
                 <div class="card">
                     <div class="card-header">Video & Gallery</div>
                     <div class="card-body p-1">
-                        <iframe class="card-img" width="560" height="315"
+                        <iframe class="card-img" width="560" height="285"
                             src="https://www.youtube.com/embed/AJ7vE64HLac" title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
@@ -241,17 +238,113 @@
     </div>
 </section>
 <br>
+<h1 class="text-center bg-primary text-light p-4">Important</h1>
 <section>
-<h1 class="text-center bg-primary text-light p-4">Glimpse of Student's Work</h1>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-sm-1">
-            <div class="card">
-                <img src="{% static 'img/sl1.jpg' %}" alt="" class="card-img">
+    <div class="container">
+        <div class="row">
+            <nav class="bg-primary border border-dark p-0">
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <button class="nav-link text-dark active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
+                        type="button" role="tab" aria-controls="nav-home" aria-selected="true">Latest
+                        Notifications</button>
+                    <button class="nav-link text-dark" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+                        type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Circulars /
+                        Orders</button>
+                    <button class="nav-link text-dark" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
+                        type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Recruitment</button>
+                    <button class="nav-link text-dark" id="nav-disabled-tab" data-bs-toggle="tab" data-bs-target="#nav-disabled"
+                        type="button" role="tab" aria-controls="nav-disabled" aria-selected="false">Tender</button>
+                </div>
+            </nav>
+            <div class="tab-content border border-primary " id="nav-tabContent" style="height: 200px;">
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"
+                    tabindex="0">
+                    <ul>
+                        <li><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis,
+                                tempora.</a></li>
+                        <li><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis,
+                                tempora.</a></li>
+                        <li><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis,
+                                tempora.</a></li>
+                        <li><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis,
+                                tempora.</a></li>
+                        <li><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis,
+                                tempora.</a></li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab"
+                    tabindex="0">
+                    <ul>
+                        <li><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a></li>
+                        <li><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a></li>
+                        <li><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a></li>
+                        <li><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a></li>
+                        <li><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a></li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab"
+                    tabindex="0">
+                    <ul>
+                        <li><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, saepe?</a>
+                        </li>
+                        <li><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, saepe?</a>
+                        </li>
+                        <li><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, saepe?</a>
+                        </li>
+                        <li><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, saepe?</a>
+                        </li>
+                        <li><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, saepe?</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="nav-disabled" role="tabpanel" aria-labelledby="nav-disabled-tab"
+                    tabindex="0">
+                    <ul>
+                        <li><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eius?</a></li>
+                        <li><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eius?</a></li>
+                        <li><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eius?</a></li>
+                        <li><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eius?</a></li>
+                        <li><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eius?</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
-</div>
 </section>
+<br>
+<section>
+    <h1 class="text-center bg-primary text-light p-4">Glimpse of Student's Work</h1>
+    <div class="container-fluid p-2">
+        <div class="row g-2">
+            {% for sw in studentswork %}
+            <div class="col-sm-1">
+                <div class="card">
+                    <img src="{{sw.image.url}}" alt="{{sw.altText}}" height="100" width="100" class="card-img">
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<br>
+<section>
+    <h5 class="text-center bg-primary text-light p-2">Featured Logo</h5>
+    <div class="container-fluid p-1">
+        <div class="row g-1">
+            
+            {% for l in logo %}
+            <div class="col-auto">
+                <div class="card">
+                    <marquee behavior="scroll" direction="left">
+                    <a href="{{l.logoLink}}" target="_blank"><img src="{{l.logoImage.url}}" height="40" width="40" alt="{{l.altText}}" class="card-img"></a>
+                </marquee>
+                </div>
+            </div>
+            {% endfor %}
+        
+        </div>
+    </div>
+</section>
+
 
 {% endblock index %}

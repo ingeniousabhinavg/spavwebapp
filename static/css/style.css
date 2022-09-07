@@ -1,0 +1,7 @@
+*{margin: 0%; padding: 0%; box-sizing: border-box;}
+.card {
+    border: solid dotted black 1;
+}
+a:link{
+    text-decoration: none;
+}
