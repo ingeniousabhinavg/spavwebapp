@@ -1,9 +1,10 @@
 from tkinter.messagebox import NO
 from django.contrib import admin
-from .models import Alert, Noticeboard, UpcomingLect, FeaturedLogo, GlimpseSW, SystemAdmin, TechanicalOfficer
+from .models import Alert, Noticeboard, UpcomingLect, FeaturedLogo, GlimpseSW, SystemAdmin, TechanicalOfficer, Chairperson
 
 # Register your models here.
 
+admin.site.register(Chairperson)
 admin.site.register(TechanicalOfficer)
 admin.site.register(SystemAdmin)
 admin.site.register(GlimpseSW)

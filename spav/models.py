@@ -107,3 +107,42 @@ class Faculty(models.Model):
         return self.name
 
 # faculty database #
+
+# chairperson #
+class Chairperson(models.Model):
+    name = models.CharField(max_length=50)
+    about = models.TextField()
+    DESIG_CHOICES = (
+        ('Chairperson','Chairperson'),
+        ('Chairperson in Charge ','Chairperson in Charge '),
+    )
+    designation = models.CharField(max_length=50, choices=DESIG_CHOICES)
+    date = models.DateField(auto_now=False, auto_now_add=False)
+    profile_Pic = models.ImageField(upload_to='profiles', max_length=254)
+    email = models.EmailField(max_length=254)
+    phone = models.CharField(max_length=14)
+    cv = models.FileField(upload_to='cv', max_length=100, default=None)
+
+    def __str__(self) -> str:
+        return self.name
+# chairperson #
+
+# chairperson #
+class Director(models.Model):
+    name = models.CharField(max_length=50)
+    about = models.TextField()
+    DESIG_CHOICES = (
+        ('Director','Director'),
+        ('Director in Charge ','Director in Charge '),
+    )
+    designation = models.CharField(max_length=50, choices=DESIG_CHOICES)
+    date = models.DateField(auto_now=False, auto_now_add=False)
+    profile_Pic = models.ImageField(upload_to='profiles', max_length=254)
+    email = models.EmailField(max_length=254)
+    phone = models.CharField(max_length=14)
+    cv = models.FileField(upload_to='cv', max_length=100, default=None ,null=False)
+    Publications = models.URLField(max_length=200)
+
+    def __str__(self) -> str:
+        return self.name
+# chairperson #
