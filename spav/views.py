@@ -1,10 +1,12 @@
 from multiprocessing import context
 from django.shortcuts import render
-from .models import Alert, Noticeboard, UpcomingLect, FeaturedLogo, GlimpseSW, SystemAdmin, TechanicalOfficer, Chairperson, Director
+from .models import Alert, Noticeboard, UpcomingLect, FeaturedLogo, GlimpseSW, SystemAdmin, TechanicalOfficer, Chairperson, Director, BOG, Slider
 from django.core.paginator import Paginator
 
 # Create your views here.
 
+sliderImage = Slider.objects.all()
+bogData = BOG.objects.all()
 directorData = Director.objects.all()
 chairpersonData = Chairperson.objects.all()
 toData = TechanicalOfficer.objects.all()
@@ -30,6 +32,8 @@ context = {
     'toData':toData,
     'chairpersonData':chairpersonData,
     'directorData':directorData,
+    'bogData':bogData,
+    'sliderImage':sliderImage,
 
 }
 
@@ -58,3 +62,9 @@ def chairperson(request):
 
 def director(request):
     return render(request, 'director.html', context )
+
+def actsnstatute(request):
+    return render(request, 'actsnstatute.html', context )
+
+def bog(request):
+    return render(request, 'bog.html', context )

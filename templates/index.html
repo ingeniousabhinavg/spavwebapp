@@ -17,13 +17,9 @@
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="{% static 'img/sl1.jpg' %}" height="400px" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{% static 'img/sl2.jpg' %}" height="400px" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{% static 'img/sl3.jpg' %}" height="400px" class="d-block w-100" alt="...">
+                            {% for i in sliderImage %}
+                            <img src="{{i.images.url}}" height="400px" class="d-block w-100" alt="...">
+                            {% endfor %}
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"

@@ -6,6 +6,14 @@ from django.db import models
 
 # Create your models here.
 
+class Slider(models.Model):
+    altText = models.CharField(max_length=100)
+    images = models.ImageField(upload_to='slider')
+    link = models.URLField(max_length=200, null=True)
+
+    def __str__(self) -> str:
+        return self.altText
+
 class Alert(models.Model):
     alertTitle = models.CharField(max_length=100)
     alertFile = models.FileField(upload_to='alert', max_length=100)
@@ -148,5 +156,27 @@ class Director(models.Model):
 # chairperson #
 
 # bog #
+class BOG(models.Model):
+    name = models.CharField(max_length=50)
+    DESIG_CHOICES = (
+            ('Chairperson','Chairperson'),
+            ('Director SPAV - Ex-Officio - Member','Director SPAV - Ex-Officio - Member'),
+            ('Pr. Secretary - GoAP - Member','Pr. Secretary - GoAP - Member'),
+            ('Rep. from ITPI - Member','Rep. from ITPI - Member'),
+            ('Rep. from AICTE- Member','Rep. from AICTE- Member'),
+            ('Rep. from UGC- Member','Rep. from UGC- Member'),
+            ('Rep. from CoA- Member','Rep. from CoA- Member'),
+            ('JS &FA, MoE - Member','JS &FA, MoE - Member'),
+            ('Nominee of MoE - Member','Nominee of MoE - Member'),
+            ('Nominee of MoUD- Member','Nominee of MoUD- Member'),
+            ('Senate Nominee - 1 (DoA) - Member','Senate Nominee - 1 (DoA) - Member'),
+            ('Senate Nominee - 2 (DoP) - Member','Senate Nominee - 2 (DoP) - Member'),
+            ('Registrar SPAV - Ex-Officio - Secretary','Registrar SPAV - Ex-Officio - Secretary'),
+        )
+    designation = models.CharField(max_length=50, choices=DESIG_CHOICES)
+    # profile_Pic = models.ImageField(upload_to='profiles', max_length=254)
+    date = models.DateField(auto_now=False, auto_now_add=False)
 
+    def __str__(self) -> str:
+        return self.name
 # bog #

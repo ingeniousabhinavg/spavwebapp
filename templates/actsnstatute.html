@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block title %}Acts and Statute{% endblock title %}
+{% load static %}
+{% block actsnstatute %}
+<section>
+    <h1 class="text-center bg-primary text-light p-2">SPA Acts and Statute</h1>
+    <div class="container">
+        <div class="row">
+            <h5>SPA Act - 2014</h5>
+            <p>As an Institute of national importance, the School of Planning and Architecture Vijayawada comes under the purview of an Act of the Parliament of India, which is "The School of Planning and Architecture (SPA) Act, 2014" to promote education and research in architectural study including the planning of human settlements.</p>
+        </div>
+        <div class="row g-2">
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-body">
+                        <a href="{% static 'pdf/spagazzate.pdf' %}" target="_blank"><img src="{% static 'img/statute.PNG' %}" alt="" class="card-img"></a>
+                    </div>
+                    <div class="card-footer">SPA Act, 2014</div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-body">
+                        <a href="{% static 'pdf/spagazzate2.pdf' %}" target="_blank"><img src="{% static 'img/statute.PNG' %}" alt="" class="card-img"></a>
+                    </div>
+                    <div class="card-footer">SPA Act, 2014 (CORRIGENDUM) dated 09/03/2015</div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-body">
+                        <a href="{% static 'pdf/Gazette_amendment_1.pdf' %}" target="_blank"><img src="{% static 'img/statute.PNG' %}" alt="" class="card-img"></a>
+                    </div>
+                    <div class="card-footer">SPA Act, 2014 (Amendment in Subsection 1 of section 40) dated 12/01/2016</div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-body">
+                        <a href="{% static 'pdf/Gazette_amendment_2.pdf' %}" target="_blank"><img src="{% static 'img/statute.PNG' %}" alt="" class="card-img"></a>
+                    </div>
+                    <div class="card-footer">SPA Act, 2014 (Amendment in section 4) dated 12/01/2016</div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <h5 >Statutes under SPA Act</h5>
+        <hr>
+        <div class="row">
+            <br>
+            <div class="col-3">
+                <div class="card">
+                    <div class="card-body">
+                        <a href="{% static 'pdf/Statutes.pdf' %}" target="_blank"><img src="{% static 'img/statute.PNG' %}" alt="" class="card-img"></a>
+                    </div>
+                    <div class="card-footer">Statutes</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock actsnstatute %}

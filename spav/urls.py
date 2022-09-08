@@ -8,4 +8,6 @@ urlpatterns = [
     path('director/', views.director, name='director'),
     path('chairperson/', views.chairperson, name='chairperson'),
     path('computer-center/', views.cc, name='cc'),
+    path('actsandstatutes/', views.actsnstatute, name='actsnstatute'),
+    path('bog/', views.bog, name='bog'),
 ]
