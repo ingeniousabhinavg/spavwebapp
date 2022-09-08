@@ -1,10 +1,11 @@
 from multiprocessing import context
 from django.shortcuts import render
-from .models import Alert, Noticeboard, UpcomingLect, FeaturedLogo, GlimpseSW, SystemAdmin, TechanicalOfficer, Chairperson
+from .models import Alert, Noticeboard, UpcomingLect, FeaturedLogo, GlimpseSW, SystemAdmin, TechanicalOfficer, Chairperson, Director
 from django.core.paginator import Paginator
 
 # Create your views here.
 
+directorData = Director.objects.all()
 chairpersonData = Chairperson.objects.all()
 toData = TechanicalOfficer.objects.all()
 systemadminData = SystemAdmin.objects.all()
@@ -28,6 +29,7 @@ context = {
     'systemadminData':systemadminData,
     'toData':toData,
     'chairpersonData':chairpersonData,
+    'directorData':directorData,
 
 }
 

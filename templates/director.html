@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title %}Director{% endblock %}
+{% block director %}
+<section class="bg-primary p-2">
+    <div class="container p-2">
+        <div class="row g-2">
+            <div class="col-sm-8">
+                {% for c in directorData %}
+                <div class="card">
+                    <div class="card-body">
+                        <h5>About Director</h5>
+                        <hr>
+                        <p>{{c.about}}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="col-sm-4">
+                {% for c in directorData %}
+                <div class="card">
+                    <div class="card-header p-2"><img src="{{c.profile_Pic.url}}" alt="" class="card-img"></div>
+                    <div class="card-body">
+                        <h5 class="card-heading">{{c.name}}</h5>
+                        <p>{{c.email}}</p>             
+                        <p>{{c.phone}}</p>             
+                        <a href="{{c.Publications}}">Publications</a> |         
+                        <a href="{{c.cv.url}}">CV</a>           
+                    </div>
+                    <div class="card-footer p-2"><small class="text-muted">Joined Date : {{c.date}}</small></div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+<br>
+{% endblock director %}

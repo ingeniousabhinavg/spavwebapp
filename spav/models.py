@@ -77,7 +77,7 @@ class TechanicalOfficer(models.Model):
     name = models.CharField(max_length=50) 
     qualifications = models.CharField(max_length=200)
     email = models.EmailField(max_length=254)
-    phone = models.CharField(max_length=14)
+    phone = models.CharField(max_length=14,default=True)
     profile_Pic = models.ImageField(upload_to='profiles', max_length=254)
     date =  models.DateField(auto_now=True, auto_now_add=False)
 
@@ -97,10 +97,10 @@ class Faculty(models.Model):
     designation = models.CharField(max_length=50, choices=DESIG_CHOICES) 
     qualifications = models.CharField(max_length=200)
     email = models.EmailField(max_length=254)
-    phone = models.CharField(max_length=14)
+    phone = models.CharField(max_length=14,default=True)
     profile_Pic = models.ImageField(upload_to='profiles', max_length=254)
     date =  models.DateField(auto_now=True, auto_now_add=False)
-    cv = models.FileField(upload_to='cv', max_length=100)
+    cv = models.FileField(upload_to='cv', max_length=100, default='cv')
     Publications = models.URLField(max_length=200)
 
     def __str__(self) -> str:
@@ -119,9 +119,9 @@ class Chairperson(models.Model):
     designation = models.CharField(max_length=50, choices=DESIG_CHOICES)
     date = models.DateField(auto_now=False, auto_now_add=False)
     profile_Pic = models.ImageField(upload_to='profiles', max_length=254)
-    email = models.EmailField(max_length=254)
-    phone = models.CharField(max_length=14)
-    cv = models.FileField(upload_to='cv', max_length=100, default=None)
+    email = models.EmailField(max_length=254, null=False, default='cv')
+    phone = models.CharField(max_length=14, default=True)
+    cv = models.FileField(upload_to='cv', max_length=100, default='None')
 
     def __str__(self) -> str:
         return self.name
@@ -138,7 +138,7 @@ class Director(models.Model):
     designation = models.CharField(max_length=50, choices=DESIG_CHOICES)
     date = models.DateField(auto_now=False, auto_now_add=False)
     profile_Pic = models.ImageField(upload_to='profiles', max_length=254)
-    email = models.EmailField(max_length=254)
+    email = models.EmailField(max_length=254, null=False)
     phone = models.CharField(max_length=14)
     cv = models.FileField(upload_to='cv', max_length=100, default=None ,null=False)
     Publications = models.URLField(max_length=200)
@@ -146,3 +146,7 @@ class Director(models.Model):
     def __str__(self) -> str:
         return self.name
 # chairperson #
+
+# bog #
+
+# bog #

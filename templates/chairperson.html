@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}Honourable Chairperson{% endblock %}
+{% block chairperson %}
+<section class="bg-primary p-2">
+    <div class="container p-2">
+        <div class="row g-2">
+            <div class="col-sm-8">
+                {% for c in chairpersonData %}
+                <div class="card">
+                    <div class="card-body">
+                        <h5>About Honourable Chairperson</h5>
+                        <p>{{c.about}}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="col-sm-4">
+                {% for c in chairpersonData %}
+                <div class="card">
+                    <div class="card-header p-2"><img src="{{c.profile_Pic.url}}" alt="" class="card-img"></div>
+                    <div class="card-body">
+                        <h5 class="card-heading">{{c.name}}</h5>
+                                               
+                    </div>
+                    <div class="card-footer p-2"><small class="text-muted">Joined Date : {{c.date}}</small></div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+<br>
+{% endblock chairperson %}
