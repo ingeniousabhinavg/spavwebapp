@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% block title %}Planning Department {% endblock title %}
+{% load static %}
+{% block planning %}
+<section>
+    <div class="container-fluid p-2">
+        <div class="row g-2">
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                            <div class="accordion-item">
+                              <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                  Planning
+                                </button>
+                              </h2>
+                              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    
+                                    <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                        <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">About</button>
+                                        <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Faculty</button>
+                                        <button class="nav-link" id="v-pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#v-pills-disabled" type="button" role="tab" aria-controls="v-pills-disabled" aria-selected="false" disabled>Disabled</button>
+                                        <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</button>
+                                        <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</button>
+                                      </div>
+
+                                </div>
+                              </div>
+                            </div>
+                            <div class="accordion-item">
+                              <h2 class="accordion-header" id="flush-headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                  Accordion Item #2
+                                </button>
+                              </h2>
+                              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                              </div>
+                            </div>
+                            <div class="accordion-item">
+                              <h2 class="accordion-header" id="flush-headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                  Accordion Item #3
+                                </button>
+                              </h2>
+                              <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-9">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="tab-content" id="v-pills-tabContent">
+                            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
+                                <h5 class="text-center">Department of Planning</h5><hr>
+                                <p>The Department of Planning at SPAV envisions the furthering of existing knowledge and creation of new frontiers in the field of ‘Development and Planning’ through providing enabling education and training, cutting edge research and professional consultancy in the region. Since 2008, the Department of Planning is involved in shaping young minds through quality education towards making them technically equipped, socially responsible and ethical professionals in the field of Planning.</p>
+                                <p>The students of Bachelors and Masters degree programmes are equipped to study, design and plan cities and regions in aspects of infrastructure, transportation, social amenities, land use zoning, housing, informal sector, ecology, and governance, using state of the art tools, techniques and theories. The Department started with the four year undergraduate degree programme of Bachelors of Planning in 2008, and has expanded its horizon by starting the two year mastersdegree programme of Masters in Planning with specialisations in ‘Environmental Planning and Management’ and ‘Urban and Regional Planning’ in 2013 and 2014 respectively. The Department also has a Doctoral Research programme since 2012. The students of Planning are exposed to proficient planning expertise through full-time faculty and distinguished visiting faculty. The Alumni of the Department are successfully working across India and the world as professional planners with the government and private sector.</p>
+                                <h5>Programmes of Study Offered</h5>
+                                <h6>1. Undergraduate Degree Programmes</h6>
+                                <p>B.Planning - Bachelor of Planning <a href="/">(Click to view Details)</a></p>
+                                <h6>2. Postgraduate Degree Programmes</h6>
+                                <p>M.Planning - Master of Environmental Planning Management <a href="/">(MEPM) (Click to view Details)</a><br>
+                                    M.Planning - Master of Urban and Regional Planning (MURP) <a href="/">(Click to view Details)</a><br>
+                                    M.Planning - Master of Transportation and Infrastructure Planning (MTIP) <a href="/">(Click to view Details)</a></p><br>
+                                <h6>3. Doctoral Programme</h6>
+                                <p>PhD- Doctoral Programme in Planning</p>
+                                <hr class="text-danger">
+                                <p class="text-center text-danger">Need to Formet</p>
+                                <p>Admission to Planning Programmes
+                                    For detailed admission guidelines at UG & PG level in planning please visit here. For summarized information about admission, click here.
+                                    
+                                    The Team
+                                    The Department of Planning has a judicious and wide range of expertise that includes regular faculty (Professors, Associate Professors, Assistant Professors) and Visiting Faculty (practicing professionals and faculty from other educational institutes of repute) who contribute to different planning courses and subjects each semester. Core faculty members with expertise and background in Urban and Regional Planning, Architecture, Environmental Planning, Infrastructure Planning, Transportation Planning, Industrial Area Planning, Sociology, Civil Engineering, give critical inputs at various stages of the programme. In additions, industry experts, researchers, government officials, administrators visit the campus, interact and help students analyse complex urban planning and development problems taken up each semester.
+                                    To view details of the team, please click here.
+                                    Pedagogy & Outreach
+                                    The predominant pedogogical approach of SPAV is learning by doing. Accordingly, the three planning programmes have an array of subjects which can be sgregated as theory subjects, studio subjects and lab based subjects. Teaching in SPAV is spaced into 2 semesters per annum. In each semester, there is approximately 17-18 weeks of teaching, with 35 periods per week (having 5 working days each). Out of the 35 periods per week, the majority portion is assigned to Planning Design Studio with the balance delving into theory courses. There are progressive internal assessments throughout the semester in each subject. Semester end examinations happen every April-May and November-December, which includes written, viva-voce and jury exams.
+                                    For details about Studio subjects, Theory subjects, Thesis, Professional Training and Placements, click here.
+                                    
+                                    Projects
+                                    The Department of Planning undertakes academic, consultancy and advocacy projects and assignments from all over India. As part of every semester planning and design studio / lab, the Department aligns with various municipalities and/or regional development authorities across India and undertakes real-life projects that culminate in preparation of City or Zonal Development Plans, Mobility Plans, Environmental Management Plans, Regional Plans, etc., which is shared with the local administrations. The Department of Planning also undertakes institutional consultancy projects, leading to client specific planning projects and has over 6 projects completed/ongoing. The Department under SPAV also serves as advocacy and advisor to Government of Andhra Pradesh and Government of India for proposals, evaluation and monitoring of development projects. Some of the successfully completed / ongoing projects where the Department of Planning is involved are –
+                                    
+                                    Re-delineation of erstwhile Vijayawada Guntur Tenali Mangalagiri Urban Development Authroity (VGTM-UDA) Planning jurisdiction limits
+                                    Regional Plan of Kohlapur, Maharashtra
+                                    Grid of Roads Project – Chennai
+                                    Building Inclusive Communities – ERASMUS+ Project</p>
+                                <hr class="text-danger">
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">...</div>
+                            <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel" aria-labelledby="v-pills-disabled-tab" tabindex="0">...</div>
+                            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0">...</div>
+                            <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab" tabindex="0">...</div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock planning %}

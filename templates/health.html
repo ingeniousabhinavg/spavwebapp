@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+{% block title %}Health Center{% endblock title %}
+{% load static %}
+{% block health %}
+<section>
+    <div class="container p-2">
+        <div class="row g-2">
+            <div class="col-sm-9">
+                <div class="card">
+                    <div class="card-body">
+                        <h5>Healthcare Centre</h5>
+                        <p>The school has a heathcare centre to provide first aid healthcare and nursing services to
+                            students,
+                            faculty and staff. It also refers to certain referral hospitals in and around Vijayawada to
+                            provide
+                            better health care services to its stakeholders in time.</p>
+                        <p>The school has a heathcare centre to provide first aid healthcare and nursing services to students, faculty and staff. It also refers to certain referral hospitals in and around Vijayawada to provide better health care services to its stakeholders in time.</p>
+                        <h6>The School has MoUs with Referral Hospitals mentioned below:</h6>
+                        <ol>
+                            <li>Manipal Hospitals</li>
+                            <li>Rainbow Hospitals</li>
+                            <li>Kamineni Hospitals</li>
+                            <li>Ramesh Hospitals</li>
+                            <li>Sentini Hospitals</li>
+                            <li>Sentini Hospitals</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-header bg-primary text-light">Important Links</div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Rules and Regulations of Empanelled Hospitals</li>
+                            <li>List of Services in Empanelled Hospitals</li>
+                        </ul>
+                    </div>
+                </div>
+                <br>
+                <div class="card">
+                    <!-- <div class="card-header">Important Links</div> -->
+                    <div class="card-body p-1">
+                       <img src="{% static 'img/hospital.jpg' %}" alt="" class="card-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <h4 class="text-center bg-primary text-light p-2">Available Doctors / Staffs</h4>
+        <div class="container-fluid">
+        <div class="row p-2">
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-header"><img src="{% static 'img/hospital.jpg' %}" alt="" class="card-img"></div>
+                    <div class="card-body">
+                        Name : Abhinav Kumar <br>
+                        Name : Abhinav Kumar <br>
+                        Name : Abhinav Kumar <br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-header"><img src="{% static 'img/hospital.jpg' %}" alt="" class="card-img"></div>
+                    <div class="card-body">
+                        Name : Abhinav Kumar <br>
+                        Name : Abhinav Kumar <br>
+                        Name : Abhinav Kumar <br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-header"><img src="{% static 'img/hospital.jpg' %}" alt="" class="card-img"></div>
+                    <div class="card-body">
+                        Name : Abhinav Kumar <br>
+                        Name : Abhinav Kumar <br>
+                        Name : Abhinav Kumar <br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-header"><img src="{% static 'img/hospital.jpg' %}" alt="" class="card-img"></div>
+                    <div class="card-body">
+                        Name : Abhinav Kumar <br>
+                        Name : Abhinav Kumar <br>
+                        Name : Abhinav Kumar <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h4 class="text-center bg-primary text-light p-2">Recent Activities</h4>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <marquee behavior="scroll" direction="left">
+                <img src="{% static 'img/hospital.jpg' %}" alt="" class="card-img"> <img src="{% static 'img/hospital.jpg' %}" alt="" class="card-img">
+                </marquee>
+            </div>
+            <div class="col-sm-3">
+                <marquee behavior="scroll" direction="left">
+                <img src="{% static 'img/hospital.jpg' %}" alt="" class="card-img"> <img src="{% static 'img/hospital.jpg' %}" alt="" class="card-img">
+                </marquee>
+            </div>
+            <div class="col-sm-3">
+                <marquee behavior="scroll" direction="left">
+                <img src="{% static 'img/hospital.jpg' %}" alt="" class="card-img"> <img src="{% static 'img/hospital.jpg' %}" alt="" class="card-img">
+                </marquee>
+            </div>
+            <div class="col-sm-3">
+                <marquee behavior="scroll" direction="left">
+                <img src="{% static 'img/hospital.jpg' %}" alt="" class="card-img"> <img src="{% static 'img/hospital.jpg' %}" alt="" class="card-img">
+                </marquee>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock health %}

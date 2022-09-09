@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block title %}Deans{% endblock title %}
+{% load static %}
+{% block deans %}
+<br>
+<section>
+    <div class="container p-2">
+        <div class="row g-2">
+            {% for d in deansData %}
+            <div class="col-sm-3">
+                <div class="card p-0">
+                    <div class="card-header text-center bg-primary text-light">{{d.designation}}</div>
+                    <div class="card-body p-1">
+                        <img src="{{d.profile_Pic.url}}" height="250px" alt="" class="card-img">
+                    </div>
+                    <div class="card-footer">{{d.email}} </div>
+                    <div class="card-footer">{{d.phone}}</div>
+                    <div class="card-footer">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            Dean Desk
+                        </button> <span><small class="text-muted">Sience : {{d.date}}</small></span>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Duties and Responsibilities of {{d.designation}} </h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        {{d.duties}}
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Got it !</button>
+                                        <!-- <button type="button" class="btn btn-primary"></button> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock deans %}

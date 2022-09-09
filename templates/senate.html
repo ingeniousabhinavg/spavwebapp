@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
-{% block title %}Board of Governors{% endblock title %}
+{% block title %}Senate{% endblock title %}
 {% load static %}
-{% block bog %}
+{% block senate %}
 <br>
 <section>
     <div class="container">
         <div class="row">
             <div class="card p-0">
-                <div class="card-header text-center bg-primary text-light">Board of Governors SPAV</div>
+                <div class="card-header text-center bg-primary text-light">Senate SPAV</div>
                 <div class="card-body">
                     <table class="table">
                         <tr>
@@ -16,12 +16,12 @@
                             <th>Designation</th>
                             <th>Joined Date</th>
                         </tr>
-                        {% for b in bogData %}
+                        {% for f in senateData %}
                         <tr>
                             <td>01.</td>
-                            <td>{{b.name}}</td>
-                            <td>{{b.designation}}</td>
-                            <td>{{b.date}}</td>
+                            <td>{{f.name}}</td>
+                            <td>{{f.designation}}</td>
+                            <td>{{f.date}}</td>
                         </tr>
                         {% endfor%}
                     </table>
@@ -30,4 +30,4 @@
         </div>
     </div>
 </section>
-{% endblock bog %}
+{% endblock senate %}

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}Faculty in Charges {% endblock title %}
+{% load static %}
+{% block fic %}
+<section>
+    <div class="container p-2">
+        <div class="row g-2">
+            <div class="col-sm-12">
+                <div class="card p-0">
+                    <div class="card-header text-center">Faculty In Charges</div>
+                    <div class="card-body">
+                        <table class="table card-img">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Name</th>
+                                    <th>Responsibility</th>
+                                    <th>Phone</th>
+                                    <th>Email</th>
+                                </tr>
+                            </thead>
+                            {% for f in FicData %}
+                            <tr>
+                                <td>{{f.name}}</td>
+                                <td>{{f.responsibility}}</td>
+                                <td>{{f.phone}}</td>
+                                <td>{{f.email}}</td>
+                            </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock fic %}

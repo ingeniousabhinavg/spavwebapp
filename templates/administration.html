@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}Administration{% endblock title %}
+{% load static %}
+{% block administration %}
+<section>
+    <div class="container p-2">
+        <div class="row g-2">
+            {% for a in adminData %}
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-header p-1">
+                        <img src="{{a.profile_Pic.url}}" alt="" height="300px" class="card-img">
+                    </div>
+                    <h6 class="card-header">{{a.designation}}</h6>
+                    <div class="card-body p-1">
+                       Email:- <a href="mailto:{{a.email}}">{{a.email}}</a>
+                        <hr>
+                       Phone:- <a href="tel:+91{{a.phone}}">{{a.phone}}</a>
+                        <hr>
+                        <small class="text-muted p-1">{{a.date}}</small>                        
+                    </div>
+                </div>
+            </div>
+            {% endfor%}
+        </div>
+    </div>
+</section>
+{% endblock administration %}

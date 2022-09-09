@@ -20,6 +20,7 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
             integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
+            
     </head>
 
     <body>
@@ -27,17 +28,17 @@
             <div class="container-fluid">
                 <div class="row">
                     <!-- topbar  -->
-                    <div class="d-flex bg-warning">
+                    <div class="d-flex bg-light border border-dark">
                         <div class="p-2 flex-grow-1">Flex item</div>
                         <div class="p-2"><a href="/"><i class="bi bi-arrow-down-square-fill"></i> &nbsp; Skip to
                                 main</a></div>
-                        <div class="p-2"><i class="bi bi-house-fill"></i></div>
-                        <div class="p-2"><i class="bi bi-envelope-fill"></i></div>
-                        <div class="p-2"><i class="bi bi-gear-wide-connected"></i></div>
-                        <div class="p-2"><i class="bi bi-briefcase-fill"></i></div>
-                        <div class="p-2"><i class="bi bi-phone-fill"></i></div>
-                        <div class="p-2"><i class="bi bi-youtube"></i></div>
-                        <div class="p-2"><i class="bi bi-twitter"></i></div>
+                        <div class="p-2"><a href="/"><i class="bi bi-house-fill"></i></a></div>
+                        <div class="p-2"><a href="https://email.gov.in/"><i class="bi bi-envelope-fill"></i></a></div>
+                        <div class="p-2"><a href="http://itsupport.spav.ac.in/"><i class="bi bi-gear-wide-connected"></i></a></div>
+                        <div class="p-2"><a href="https://eoffice.spav.ac.in/"><i class="bi bi-briefcase-fill"></i></a></div>
+                        <div class="p-2"><a href="https://www.spav.ac.in/directory.html"><i class="bi bi-phone-fill"></i></a></div>
+                        <div class="p-2"><a href="https://www.youtube.com/c/SPAVIJAYAWADAOFFICIAL"><i class="bi bi-youtube"></i></a></div>
+                        <div class="p-2"><a href="https://twitter.com/SPAVIJAYAWADA08"><i class="bi bi-twitter"></i></a></div>
                         <div class="p-2 border border-light"><a href="/admin" target="_blank"><i
                                     class="bi bi-person-circle"></i></a></div>
                     </div>
@@ -55,7 +56,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="card p-0 bg-primary">
-                        <nav class="navbar navbar-expand-lg bg-light">
+                        <nav class="navbar navbar-expand-lg bg-warning">
                             <div class="container-fluid">
                                 <a class="navbar-brand" href="#"></a>
                                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -88,23 +89,27 @@
                                                 <li>
                                                     <hr class="dropdown-divider">
                                                 </li>
-                                                <li><a class="dropdown-item" href="#">Finance Commitee</a></li>
+                                                <li><a class="dropdown-item" href="/fc">Finance Commitee</a></li>
                                                 <li>
                                                     <hr class="dropdown-divider">
                                                 </li>
-                                                <li><a class="dropdown-item" href="#">Bulding Workd Commitee</a></li>
+                                                <li><a class="dropdown-item" href="/bwc">Bulding Works Commitee</a></li>
                                                 <li>
                                                     <hr class="dropdown-divider">
                                                 </li>
-                                                <li><a class="dropdown-item" href="#">Senate</a></li>
+                                                <li><a class="dropdown-item" href="/senate">Senate</a></li>
                                                 <li>
                                                     <hr class="dropdown-divider">
                                                 </li>
-                                                <li><a class="dropdown-item" href="#">Deans</a></li>
+                                                <li><a class="dropdown-item" href="/deans">Deans</a></li>
                                                 <li>
                                                     <hr class="dropdown-divider">
                                                 </li>
-                                                <li><a class="dropdown-item" href="#">..........</a></li>
+                                                <li><a class="dropdown-item" href="/administration">Administration</a></li>
+                                                <li>
+                                                    <hr class="dropdown-divider">
+                                                </li>
+                                                <li><a class="dropdown-item" href="/fic">Faculty In Charges</a></li>
                                             </ul>
                                         </li>
                                         <li class="nav-item dropdown">
@@ -131,8 +136,11 @@
                                                 Departments
                                             </a>
                                             <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                <li><a class="dropdown-item" href="/planning">Planning</a></li>
+                                                <li>
+                                                    <hr class="dropdown-divider">
+                                                </li>
+                                                <li><a class="dropdown-item" href="/architecture">Architecture</a></li>
                                                 <li>
                                                     <hr class="dropdown-divider">
                                                 </li>
@@ -150,7 +158,7 @@
                                                 <li>
                                                     <hr class="dropdown-divider">
                                                 </li>
-                                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                <li><a class="dropdown-item" href="/health">Health Center</a></li>
                                                 <li>
                                                     <hr class="dropdown-divider">
                                                 </li>
@@ -283,6 +291,50 @@
         {% endblock bog %}
         <!-- bog page  -->
 
+        <!-- finance commitee page  -->
+        {% block fc %}
+        {% endblock fc %}
+        <!-- finance commitee page  -->
+
+        <!-- bwc  -->
+        {% block bwc %}
+        {% endblock bwc %}
+        <!-- bwc  -->
+
+        <!-- senate page  -->
+        {% block senate %}
+        {% endblock senate %}
+        <!-- senate page  -->
+       
+        <!-- deans page  -->
+        {% block deans %}
+        {% endblock deans %}
+        <!-- deans page  -->
+
+        <!-- administration page  -->
+        {% block administration %}
+        {% endblock administration %}
+        <!-- administration page  -->
+
+        <!-- architecture page  -->
+        {% block architecture %}
+        {% endblock architecture %}
+        <!-- architecture page  -->
+
+        <!-- planning page  -->
+        {% block planning %}
+        {% endblock planning %}
+        <!-- planning page  -->
+
+        <!-- fic's page  -->
+        {% block fic %}
+        {% endblock fic %}
+        <!-- fic's page  -->
+
+        <!-- health center  -->
+        {% block health %}
+        {% endblock health %}
+        <!-- health center  -->
 
 
         <br>
