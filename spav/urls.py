@@ -19,4 +19,6 @@ urlpatterns = [
     path('architecture/', views.architecture, name='architecture'),
     path('fic/', views.fic, name='fic'),
     path('health/', views.health, name='health'),
+    # Lab
+    path('lab/', views.lab, name='lab'),
 ]

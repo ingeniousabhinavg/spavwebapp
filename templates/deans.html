@@ -6,10 +6,11 @@
 <section>
     <div class="container p-2">
         <div class="row g-2">
+            
             {% for d in deansData %}
             <div class="col-sm-3">
                 <div class="card p-0">
-                    <div class="card-header text-center bg-primary text-light">{{d.designation}}</div>
+                    <div class="card-header text-center bg-{% cycle 'primary' 'danger' 'warning' 'dark' 'info'  %} text-light">{{d.designation}}</div>
                     <div class="card-body p-1">
                         <img src="{{d.profile_Pic.url}}" height="250px" alt="" class="card-img">
                     </div>
@@ -17,7 +18,7 @@
                     <div class="card-footer">{{d.phone}}</div>
                     <div class="card-footer">
                         <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        <button type="button" class="btn btn-{% cycle 'primary' 'danger' 'warning' 'dark' 'info'  %}" data-bs-toggle="modal"
                             data-bs-target="#exampleModal">
                             Dean Desk
                         </button> <span><small class="text-muted">Sience : {{d.date}}</small></span>

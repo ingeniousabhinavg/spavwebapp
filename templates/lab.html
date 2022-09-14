@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}Test Page{% endblock title %}
+{% load static %}
+{% block lab %}
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h6>Automatic loremipsum</h6>
+                        {% lorem w p random %}
+                    </div>
+                    <h6>Date and Time</h6>
+                    <div class="card-footer">It is {% now "dS F Y H:i" %}</div>
+                    <div class="card-footer">It is {% now "jS \o\f F" %}</div>
+                    <div class="card-footer">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock lab %}

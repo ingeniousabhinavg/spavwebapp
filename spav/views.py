@@ -5,20 +5,20 @@ from django.core.paginator import Paginator
 
 # Create your views here.
 
-FicData = FIC.objects.all()
 sliderImage = Slider.objects.all()
+FicData = FIC.objects.all()
 adminData = Administration.objects.all()
 bogData = BOG.objects.all()
 bwcData = Bwc.objects.all()
 fcData = Fc.objects.all()
 senateData = Senate.objects.all()
-deansData = Deans.objects.all()
+deansData = Deans.objects.all().order_by('designation')[:9]
 directorData = Director.objects.all()
 chairpersonData = Chairperson.objects.all()
 toData = TechanicalOfficer.objects.all()
 systemadminData = SystemAdmin.objects.all()
 lectureData = UpcomingLect.objects.all()
-noticeData = Noticeboard.objects.all()
+noticeData = Noticeboard.objects.all().order_by('noticeDate')
 alertData = Alert.objects.all()
 featuredLogo = FeaturedLogo.objects.all()
 studentswork = GlimpseSW.objects.all()
@@ -43,7 +43,7 @@ context = {
     'bwcData':bwcData,
     'senateData':senateData,
     'deansData':deansData,
-    'sliderImage':sliderImage,
+    'slider':sliderImage,
     'adminData':adminData,
     'FicData':FicData,
 }
@@ -106,3 +106,8 @@ def fic(request):
 
 def health(request):
     return render(request,  'health.html', context )
+
+# Lab #
+def lab(request):
+    return render(request,  'lab.html', context )
+# Lab #
