@@ -13,4 +13,4 @@ EasyVisitors
 django-baton==2.4.1
 django-jazzmin
 django-crispy-forms
-
+django-richtextfield
